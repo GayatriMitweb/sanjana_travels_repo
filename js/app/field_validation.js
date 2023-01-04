@@ -1526,8 +1526,7 @@ function get_to_datetime (from_date, to_date) {
 			edate1[1] - 1,
 			edate1[0],
 			edatetime[0],
-			edatetime[1],
-			edatetime[2]
+			edatetime[1]
 		).getTime();
 
 		var currentDate = new Date(new Date(e_date_temp).getTime() + 24 * 60 * 60 * 1000);
@@ -1550,10 +1549,7 @@ function get_to_datetime (from_date, to_date) {
 		if (minute < 10) {
 			minute = '0' + minute;
 		}
-		if (seconds < 10) {
-			seconds = '0' + seconds;
-		}
-		$('#' + to_date).val(day + '-' + month + '-' + year + ' ' + hours + ':' + minute + ':' + seconds);
+		$('#' + to_date).val(day + '-' + month + '-' + year + ' ' + hours + ':' + minute);
 	}
 	else {
 		$('#' + to_date).val('');

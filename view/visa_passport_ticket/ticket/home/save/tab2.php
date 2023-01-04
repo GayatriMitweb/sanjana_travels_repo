@@ -17,10 +17,10 @@
 		<div class="dynform-item">		
 			<div class="row">
 				<div class="col-md-2 col-sm-4 col-xs-12 mg_bt_10">
-					<input type="text" id="departure_datetime-1" name="departure_datetime" class="app_datetimepicker" placeholder="Departure Date-Time" title="Departure Date-Time" value="<?php echo date('d-m-Y H:i:s') ?>" onchange="get_arrival_dateid(this.id);" data-dyn-valid="required">
+					<input type="text" id="departure_datetime-1" name="departure_datetime" class="app_datetimepicker" placeholder="Departure Date-Time" title="Departure Date-Time" value="<?php echo date('d-m-Y H:i') ?>" onchange="get_arrival_dateid(this.id);" data-dyn-valid="required">
 				</div>
 				<div class="col-md-2 col-sm-4 col-xs-12 mg_bt_10">
-					<input type="text" id="arrival_datetime-1" name="arrival_datetime" class="app_datetimepicker" placeholder="Arrival Date-Time" title="Arrival Date-Time" value="<?php echo date('d-m-Y H:i:s') ?>" data-dyn-valid="required">
+					<input type="text" id="arrival_datetime-1" name="arrival_datetime" class="app_datetimepicker" placeholder="Arrival Date-Time" title="Arrival Date-Time" value="<?php echo date('d-m-Y H:i') ?>" data-dyn-valid="required">
 				</div>
 				<div class="col-md-2 col-sm-4 col-xs-12 mg_bt_10">
 					<select id="airlines_name-1" name="airlines_name" title="Airlines Name" style="width:100%" data-dyn-valid="required" class="app_select" onchange="get_auto_values('booking_date','basic_cost','payment_mode','service_charge','markup','save','true','service_charge','discount');">
@@ -95,7 +95,7 @@
 
 <script>
 
-$('#departure_datetime-1, #arrival_datetime-1').datetimepicker({ format:'d-m-Y H:i:s' });
+$('#departure_datetime-1, #arrival_datetime-1').datetimepicker({ format:'d-m-Y H:i' });
 
 $('#airlines_name-1,#plane_from_location-1,#plane_to_location-1').select2();
 
